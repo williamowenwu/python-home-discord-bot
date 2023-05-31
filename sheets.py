@@ -194,14 +194,6 @@ class SheetsManager:
         print("Sucessfully deleted recently added column")
 
 if '__main__' == __name__:
-    #"""
-    # Get todays date
-    # If approaching new year
-    # check
-    # else don't
-    # then check month 
-    # 
-    # """
     sa = gspread.service_account(filename="discord-connection.json")
     with open("data.json", "r") as f:
         sheet_info_dict = json.load(f)
@@ -211,7 +203,7 @@ if '__main__' == __name__:
     month_str = today.strftime("%B")
     print(month_str)
     user = input("User: ")
-    
+
     if month != 12:
         # open the year
         try:
@@ -239,27 +231,3 @@ if '__main__' == __name__:
 
     # future = datetime.date(23, 1, 2)
     # future_str = future.strftime("%B %Y")
-
-
-
-    # month_str = today.strftime("%B %Y")
-    # old_month = sheet_info_dict.get("current_month")
-    # print(month_str)
-    # if(old_month == future.month):
-    #     # sh = sa.open("ajdsokgajd")
-    #     try:
-    #         sh = sa.open(f"{month_str}")
-    #         print(sh)
-    #         # worksheet = sh.worksheet("Sheet1")
-    #         # title_row = ["Date", "Amount Earned", "Hours Worked", "Week 1", "Week 2", "Week 3", "Week 4", "Week 5"]
-    #         # worksheet.append_row(title_row)
-    #     except gspread.exceptions.SpreadsheetNotFound as e:
-    #         print(f"Spreadsheet '{month_str}' doesn't exist")
-    #     except Exception as e:
-    #         print("A exception: ", str(e))
-    # else:
-    #     print(f"{future.month}\n{old_month}")
-    
-    
-    
-
