@@ -1,0 +1,17 @@
+{
+    "column_names" : ["Date", "Amount Earned", "Hours Worked", "Week 1", "Week 2", "Week 3", "Week 4", "Week 5"],
+    "sheet_info_dict" : {
+        "last_row": 2,
+        "amount_sum": 0,
+        "hours_sum": 0,
+        "total_week_hours": 0,
+        "total_week_amount": 0,
+        "week_avg_amount": 0,
+        "week_avg_hours": 0,
+        "current_week" : 1,
+        "current_month" : 1,
+        "current_year": 2023
+
+    }
+
+}
