@@ -4,6 +4,7 @@
         "last_row": 2,
         "amount_sum": 0,
         "hours_sum": 0,
+        "days_worked": 0,
         "total_week_hours": 0,
         "total_week_amount": 0,
         "week_avg_amount": 0,

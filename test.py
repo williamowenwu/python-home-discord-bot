@@ -1,4 +1,5 @@
 import json
+import gspread
 
 def get_data() -> dict:
     try:
@@ -8,11 +9,13 @@ def get_data() -> dict:
         print("File not found\n",e)
         exit()
 
+
 def set_data(data: dict) -> dict:
     data["last_row"] = 0
     with open("data.json", "w") as f:
         json.dump(data, f)
     return data
+
 
 def write_json(data: dict) -> dict:
     data["last_row"] += 1
@@ -21,10 +24,12 @@ def write_json(data: dict) -> dict:
         json.dump(data, f)
     return data
 
+
 def read_json():
         with open("data.json", "r") as f:
             data = json.load(f)
             print(data)
+
 
 def main():
     data = get_data()
@@ -54,5 +59,9 @@ def main():
         exit()
     print("Sucessful!")
 
+
 if __name__ == '__main__':
-    print("hi")
+    sa = gspread.service_account(filename="discord-connection.json")
+    sh = sa.open("My sheet")
+    if sh.id == '1ynxxqZpDgKAL7u2MXCjqayjv0-K5k-rOz-OQBlbn0w4':
+        print(f"https://docs.google.com/spreadsheets/d/{sh.id}")
