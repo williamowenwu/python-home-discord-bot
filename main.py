@@ -126,4 +126,7 @@ async def add_new_work_month(
 
     await interaction.response.send_message(f" Hey {interaction.user.mention}, I sucessfully created a new month\nUwU", ephemeral=True)
 
+
+# there should be one for getting the statistics
+
 bot.run(TOKEN)
